@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.signup{
+  border: 1px solid rgba(215, 215, 215, 0.381);
+}
+
+ul li::before{
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-image: url('./assets/radio-button.png');
+  background-size: cover;
+  background-position: center;
+}
+
+ul li.checked{
+  color: #565656;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  height: 20px;
+  width: 20px;
+  background-image: url('./assets/check.png');
+  top: 10px;
+}
+
+@media screen and (max-width:350px) {
+  li p{
+    padding-top: 15px;
+  }
+}
