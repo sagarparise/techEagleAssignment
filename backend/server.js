@@ -12,11 +12,7 @@ const port = process.env.PORT || 3000
 //lTwebSbMUhsMGDE9
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(cors({
-  origin: ["https://tech-eagle-assignment-gamma.vercel.app/"],
-  methods: ["GET", "POST"],
-  credentials: true,
-}));
+app.use(cors());
 
 app.get('/', (req, res) => {
   app.use(express.static(path.resolve(__dirname, "frontend", "dist" )));
