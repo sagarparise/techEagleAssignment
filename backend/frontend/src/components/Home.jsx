@@ -18,7 +18,7 @@ const[inputVal, setInputVal] = useState('')
     console.log(inputVal)
     if(!inputVal) return;
     try {
-      const response = await fetch('http://localhost:8000/api/todo/add', {
+      const response = await fetch(`${window.location.origin}/api/todo/add`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const[inputVal, setInputVal] = useState('')
         }),
       })
       const data = await response.json()
-      console.log(data)
+     // console.log(data)
       setInputVal('')
       dispatch(addTodo(data.todo))
       
@@ -99,7 +99,7 @@ const Row = ({todo})=>{
 
   const handleDelete = async(id)=>{
     try {
-      const response = await fetch(`http://localhost:8000/api/todo/delete/${id}`, {
+      const response = await fetch(`${window.location.origin}/api/todo/delete/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ const Row = ({todo})=>{
         },
       })
       const data = await response.json()
-      console.log(data)
+      //console.log(data)
     dispatch(deleteTodo(id))
       
     } catch (error) {

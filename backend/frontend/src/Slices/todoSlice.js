@@ -13,7 +13,7 @@ const todoSlice = createSlice({
       state.todos.push(action.payload);
     },
     deleteTodo: (state, action) => {
-      console.log(action.payload)
+ 
       state.todos = state.todos.filter((todo) => todo._id!== action.payload);
     }
   }

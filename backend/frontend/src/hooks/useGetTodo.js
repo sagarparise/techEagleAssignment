@@ -17,7 +17,7 @@ function useGetTodo() {
       return;
     }
   try {
-    const response = await fetch('http://localhost:8000/api/todo/get', {
+    const response = await fetch(`${window.location.origin}/api/todo/get`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

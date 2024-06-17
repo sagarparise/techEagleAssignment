@@ -5,7 +5,7 @@ import { toast } from 'react-toastify'
 import { useDispatch } from 'react-redux'
 
 function Login() {
-  const url = 'http://localhost:8000'
+  const url = window.location.origin;
   const navigate = useNavigate();
  const dispatch = useDispatch();
   const [formData, setFormData] = useState({

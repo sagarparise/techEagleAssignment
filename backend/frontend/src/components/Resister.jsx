@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { setToken, setUser } from '../Slices/userSlice';
 
 function Resister() {
-  const url = 'http://localhost:8000'
+  const url = window.location.origin;
  const navigate = useNavigate();
 const dispatch = useDispatch()
  const [formData, setFormData] = useState({
